@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somu Editor</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial; background:linear-gradient(135deg,#ffe4ec,#e0f7e0); min-height:100vh; text-align:center; padding:40px 20px}
+h1{color:#d63384; font-size:36px}
+.container{max-width:500px; margin:30px auto}
+.btn{width:100%; padding:18px; margin:12px 0; font-size:19px; font-weight:bold; border:none; border-radius:35px; cursor:pointer; color:white; box-shadow:0 6px 15px rgba(0,0,0,0.15)}
+.btn:hover{transform:translateY(-3px)}
+.b1{background:linear-gradient(45deg,#ff69b4,#ff1493)}
+.b2{background:linear-gradient(45deg,#32cd32,#228b22)}
+.b3{background:linear-gradient(45deg,#4169e1,#1e90ff)}
+.b5{background:linear-gradient(45deg,#9370db,#8a2be2)}
+</style>
+</head>
+<body>
+
+<h1>🌸 SOMU EDITOR 🌸</h1>
+<p>Har button pe naya page khulega 🦋</p>
+
+<div class="container">
+<button class="btn b1" onclick="openPage('about')">💖 About Page</button>
+<button class="btn b2" onclick="openPage('gallery')">🌿 Gallery Page</button>
+<button class="btn b3" onclick="openPage('video')">🎥 Video Page</button>
+<button class="btn b5" onclick="openPage('welcome')">🍂 November Page</button>
+</div>
+
+<script>
+function openPage(type){
+let c="";
+if(type=='about'){c=`<body style="text-align:center;padding:80px;font-family:Arial;background:#ffe4e1"><h1>💖 About Somu</h1><p>Main Somu Editor hun 🌸</p><br><button onclick="window.close()" style="padding:12px 30px;border-radius:20px;border:none;background:#ff69b4;color:white">Close</button></body>`;}
+if(type=='gallery'){c=`<body style="text-align:center;padding:60px;font-family:Arial;background:#e6ffe6"><h1>🌿 Gallery 🦋</h1><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:400px;margin:20px auto"><img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=300" style="width:100%;border-radius:15px"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300" style="width:100%;border-radius:15px"></div><br><button onclick="window.close()" style="padding:12px 30px;border-radius:20px;border:none;background:green;color:white">Close</button></body>`;}
+if(type=='video'){c=`<body style="text-align:center;padding:80px;font-family:Arial;background:#e0e6ff"><h1>🎥 Video Page</h1><br><iframe width="320" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border-radius:15px;border:none"></iframe><br><br><button onclick="window.close()" style="padding:12px 30px;border-radius:20px;border:none;background:#4169e1;color:white">Close</button></body>`;}
+if(type=='welcome'){c=`<body style="text-align:center;padding:80px;font-family:Arial;background:#d9e7d6"><h1>🍂 November Ki Pehli Subah 🦋</h1><p>🌿 Hara Manzar 🐦 Parinde 🦋 Titliyan</p><br><div style="font-size:40px">🦋🦋🦋</div><br><button onclick="window.close()" style="padding:12px 30px;border-radius:20px;border:none;background:#2d4a32;color:white">Close</button></body>`;}
+let w=window.open('','_blank');w.document.write(c);w.document.close();
+}
+</script>
+</body>
+</html>
